@@ -13,7 +13,6 @@
   --svg-grey-color: #afb1b8;
 }
 
-/* normalize */
 h1,
 h2,
 h3,
@@ -28,7 +27,6 @@ li {
   padding: 0px;
 }
 
-/* Save proportion of images!!! */
 img {
   display: block;
   max-width: 100%;
@@ -60,18 +58,17 @@ body {
   margin: -1px;
 }
 
-/* reset styles <ul> */
+/* reset styles <ul> <a>  */
 .list {
   list-style: none;
 }
 
-/* reset styles <a> */
 .link {
   text-decoration: none;
   font-style: normal;
 }
 
-/* Position containers */
+/* Position containers/section/title */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -79,11 +76,10 @@ body {
   padding: 0 15px;
 }
 
-/* Position section */
 .section {
   padding: 94px 0;
 }
-/* Position title h2 */
+
 .title {
   margin-bottom: 50px;
   text-align: center;
@@ -99,6 +95,7 @@ body {
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
+  padding: 24px 0 24px 0;
 }
 
 .logo-black {
@@ -116,6 +113,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding: 30px 0;
 }
 
 .nav-link:hover,
@@ -126,11 +124,7 @@ body {
 /* header position */
 .page-header {
   max-height: 80px;
-}
-
-.page-header {
   border-bottom: 1px solid var(--header-separate-line);
-  padding: 24px 0 25px;
 }
 
 .header-container {
@@ -158,12 +152,6 @@ body {
   gap: 50px;
 }
 
-.contacts-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 /* leaves an active link */
 .link.current {
   color: var(--accent-color);
@@ -176,6 +164,11 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 32px 0;
 }
 
 .contacts-link:hover,
@@ -209,6 +202,8 @@ body {
   background-repeat: no-repeat;
   margin: 0 auto;
   max-width: 1600px;
+
+  padding: 200px 0 200px;
 }
 
 .hero-title {
@@ -219,6 +214,11 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  max-width: 696px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .primary-button {
@@ -236,6 +236,9 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+
+  margin: auto;
+  padding: 10px 32px;
 }
 
 .primary-button:hover,
@@ -245,29 +248,14 @@ body {
   border-radius: 4px;
 }
 
-/* hero position */
-.hero {
-  padding: 200px 0 200px;
-}
-
-.hero-title {
-  max-width: 696px;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
-.primary-button {
-  margin: auto;
-  padding: 10px 32px;
-}
-
 /* features title h2 hidden!!! */
 .features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 .features-text {
@@ -277,7 +265,6 @@ body {
   line-height: 1.71;
 }
 
-/* features title position */
 .features-section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -306,10 +293,6 @@ body {
   max-width: 270px;
 }
 
-.features-title {
-  margin-bottom: 10px;
-}
-
 /* about */
 /* h2 title */
 .title {
@@ -318,7 +301,6 @@ body {
   line-height: 1.16;
 }
 
-/* about position*/
 .about-section {
   padding-bottom: 94px;
 }
@@ -347,6 +329,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .team-text {
@@ -354,9 +339,11 @@ body {
 
   font-size: 16px;
   line-height: 1.18;
+
+  text-align: center;
+  margin-bottom: 16px;
 }
 
-/* our team position */
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -374,16 +361,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-title {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.team-text {
-  text-align: center;
-  margin-bottom: 16px;
 }
 
 /* social links fb, in, tw... */
@@ -448,6 +425,8 @@ body {
 /* footer */
 .footer {
   background-color: var(--secondary-footer-color);
+
+  padding: 60px 0;
 }
 
 .address-link-map {
@@ -467,11 +446,6 @@ body {
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
-}
-
-/* footer position*/
-.footer {
-  padding: 60px 0;
 }
 
 .footer-container {
@@ -572,9 +546,7 @@ body {
 /* buttons position */
 .filter-list {
   margin-bottom: 34px;
-}
 
-.filter-list {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -610,7 +582,6 @@ body {
   line-height: 1.88;
 }
 
-/* portfolio html position*/
 .card-list {
   display: flex;
   flex-wrap: wrap;
