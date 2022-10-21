@@ -117,14 +117,13 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 30px 0;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
-
-  transition: transform 250ms;
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* leaves an active link */
@@ -191,6 +190,8 @@ body {
   align-items: center;
   gap: 10px;
   padding: 32px 0;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-link:hover,
@@ -201,6 +202,8 @@ body {
 /* svg mail, tel color  */
 .contacts-logo-icon {
   fill: var(--secondary-text-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 /* svg mail, tel hover, focus */
@@ -261,6 +264,9 @@ body {
 
   margin: auto;
   padding: 10px 32px;
+
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .primary-button:hover,
@@ -425,10 +431,14 @@ body {
   justify-content: center;
   background-color: var(--primary-white-color);
   border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .net-icon {
   fill: var(--svg-grey-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 /* change hover, focus colors of icons */
@@ -452,6 +462,9 @@ body {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+
+  transition: border-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 
 .clients-list {
@@ -488,6 +501,8 @@ body {
 
   font-size: 14px;
   line-height: 1.7;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .address-link:hover,
@@ -555,6 +570,8 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-net-icon {
@@ -579,6 +596,10 @@ body {
   border: none;
   cursor: pointer;
   padding: 6px 22px;
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .filter-button:hover,
@@ -605,6 +626,8 @@ body {
 
   display: block;
   width: 370px;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-link:hover,
@@ -680,5 +703,68 @@ body {
   padding: 63px 24px;
 
   transform: translateY(100%);
+
   transition: transform 250ms;
+}
+
+/* modal */
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* invisible modal window */
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  background-color: var(--primary-white-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+}
+
+.modal {
+  position: relative;
+  transition: transform 250ms var(--timing-function);
+}
+
+.modal-close-button {
+  background: var(--primary-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.modal-icon {
+  fill: var(--logo-black-color);
 }
