@@ -718,6 +718,10 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+
+  opacity: 1;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 /* invisible modal window */
@@ -725,6 +729,10 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.3);
 }
 
 .modal {
@@ -736,15 +744,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
   border-radius: 4px;
-}
 
-.modal {
-  position: relative;
+  transform: translate(-50%, -50%) scale(1);
+
   transition: transform 250ms var(--timing-function);
 }
 
