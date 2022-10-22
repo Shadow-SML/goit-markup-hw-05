@@ -131,6 +131,7 @@ body {
   color: var(--accent-color);
 }
 
+/* underscore active link */
 .current::after {
   content: "";
 
@@ -704,7 +705,7 @@ body {
 
   transform: translateY(100%);
 
-  transition: transform 250ms;
+  transition: transform 250ms var(--timing-function);
 }
 
 /* modal */
@@ -721,7 +722,7 @@ body {
 
   opacity: 1;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 2500ms var(--timing-function);
 }
 
 /* invisible modal window */
